@@ -79,7 +79,7 @@ fn search<'a>(query: &str, contents: &'a str) -> Vec<SearchResult> {
     for (i, line) in contents.lines().enumerate() {
         if line.contains(query) {
             results.push(SearchResult {
-                line_number: i,
+                line_number: i + 1,
                 result_string: line.to_string(),
             });
         }
@@ -97,7 +97,7 @@ fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<SearchResu
         println!("line {}", line);
         if line.to_lowercase().contains(&query) {
             results.push(SearchResult {
-                line_number: i,
+                line_number: i + 1,
                 result_string: line.to_string(),
             });
         }
