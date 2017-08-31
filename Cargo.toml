@@ -1,0 +1,7 @@
+[package]
+name = "greprs"
+version = "0.1.0"
+authors = ["KaJuan Johnson <kdjohnson23@oakland.edu>"]
+
+[dependencies]
+ansi_term = "0.9"
